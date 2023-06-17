@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 /**
 * main - A program that print various types of compile on the computer
 * Return: 0 (success)

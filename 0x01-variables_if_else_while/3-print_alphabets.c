@@ -6,19 +6,18 @@
 
 int main(void)
 {
-	char c = 'a';
+	int i;
 
-	while (c <= 'z' || c <= 'Z')
+	for (i = 0; 1 < 26; i++)
 	{
-		putchar(c);
-		c++;
-		if (c > 'z')
-		{
-			c = 'A';
-		}
+		putchar('a' + i);
+	}
+
+	for (i = 0; i < 26; i++)
+	{
+		putchar('A' + i);
 	}
 
 	putchar('\n');
-
 	return (0);
 }

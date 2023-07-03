@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset - fill a block of memory with a specific value
+ * _memset - Fill a block of memory with a specific value
  * @s: pointed destination
  * @b: the desired value
  * @n: number of bytes
@@ -9,7 +9,7 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; i < n; i++)
 		s[i] = b;

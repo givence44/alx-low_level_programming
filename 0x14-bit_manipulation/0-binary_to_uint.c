@@ -15,13 +15,12 @@ unsigned int binary_to_uint(const char *b)
 	if (!b)
 		return (0);
 
+	for (j = 0; b[j]; j++)
 	{
 		if (b[j] != '0' && b[j] != '1')
 			return (0);
 
 		grip = grip * 2 + (b[j] - '0');
-
-		for (j = 0; b[j]; j++)
 	}
 
 	return (grip);

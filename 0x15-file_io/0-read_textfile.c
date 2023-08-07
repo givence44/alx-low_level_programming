@@ -18,8 +18,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t g;
 	ssize_t b;
 
-	lamd = open(filename, "r");
-	if (lamd == NULL)
+	lamd = open(filename,O_RDONLY);
+	if (lamd == -1)
 		return (0);
 
 	lad = malloc(letters * sizeof(char));

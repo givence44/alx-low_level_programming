@@ -24,10 +24,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	lad = malloc(letters * sizeof(char));
 	b = read(lamd, lad, letters);
-	close(lamd);
 
 	g = write(STDOUT_FILENO, lad, b);
-	free(lad);
 
+	free(lad);
+	close(lamd);
 	return (g);
 }

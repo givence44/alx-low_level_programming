@@ -11,22 +11,21 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int g, lamd, ent = 0;
+	int lamd, g, ent = 0;
 
 	if (filename == NULL)
 		return (-1);
 
 	if (text_content != NULL)
-	g = write(lamd, text_content, ent);
-
-	if (lamd == -1 || g == -1)
-		return (-1);
 	{
 		for (ent = 0; text_content[ent];)
 			ent++;
 	}
 
 	lamd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	g = write(lamd, text_content, ent);
+	if (lamd == -1 || g == -1)
+		return (-1);
 
 	close(lamd);
 

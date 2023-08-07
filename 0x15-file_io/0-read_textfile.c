@@ -18,16 +18,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t g;
 	ssize_t b;
 
-	lamd = open(filename,O_RDONLY);
+	lamd = open(filename, O_RDONLY);
 	if (lamd == -1)
 		return (0);
 
 	lad = malloc(letters * sizeof(char));
 	b = read(lamd, lad, letters);
+	close(lamd);
 
 	g = write(STDOUT_FILENO, lad, b);
-
 	free(lad);
-	close(lamd);
+
 	return (g);
 }
